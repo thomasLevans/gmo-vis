@@ -1,0 +1,238 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'dev-dependency',
+1 verbose cli   'd3' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json gmo-vis@0.1.0 No repository field.
+6 warn package.json gmo-vis@0.1.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'dev-dependency', null ]
+9 verbose cache add name=undefined spec="dev-dependency" args=["dev-dependency",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'dev-dependency',
+10 verbose parsed url   path: 'dev-dependency',
+10 verbose parsed url   href: 'dev-dependency' }
+11 verbose cache add [ 'd3', null ]
+12 verbose cache add name=undefined spec="d3" args=["d3",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'd3',
+13 verbose parsed url   path: 'd3',
+13 verbose parsed url   href: 'd3' }
+14 silly lockFile 5fc0994c-dev-dependency dev-dependency
+15 verbose lock dev-dependency C:\Users\Tom\AppData\Roaming\npm-cache\5fc0994c-dev-dependency.lock
+16 silly lockFile 7cfd024b-d3 d3
+17 verbose lock d3 C:\Users\Tom\AppData\Roaming\npm-cache\7cfd024b-d3.lock
+18 silly lockFile 7cfd024b-d3 d3
+19 silly lockFile 7cfd024b-d3 d3
+20 silly lockFile 5fc0994c-dev-dependency dev-dependency
+21 silly lockFile 5fc0994c-dev-dependency dev-dependency
+22 verbose addNamed [ 'd3', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 97977b46-d3 d3@
+25 verbose lock d3@ C:\Users\Tom\AppData\Roaming\npm-cache\97977b46-d3.lock
+26 verbose addNamed [ 'dev-dependency', '' ]
+27 verbose addNamed [ null, '*' ]
+28 silly lockFile 8a64121e-dev-dependency dev-dependency@
+29 verbose lock dev-dependency@ C:\Users\Tom\AppData\Roaming\npm-cache\8a64121e-dev-dependency.lock
+30 silly addNameRange { name: 'd3', range: '*', hasData: false }
+31 silly addNameRange { name: 'dev-dependency', range: '*', hasData: false }
+32 verbose request where is /dev-dependency
+33 verbose request registry https://registry.npmjs.org/
+34 verbose request id d0bb912c75cc01d7
+35 verbose url raw /dev-dependency
+36 verbose url resolving [ 'https://registry.npmjs.org/', './dev-dependency' ]
+37 verbose url resolved https://registry.npmjs.org/dev-dependency
+38 verbose request where is https://registry.npmjs.org/dev-dependency
+39 info trying registry request attempt 1 at 12:36:47
+40 http GET https://registry.npmjs.org/dev-dependency
+41 verbose request where is /d3
+42 verbose request registry https://registry.npmjs.org/
+43 verbose url raw /d3
+44 verbose url resolving [ 'https://registry.npmjs.org/', './d3' ]
+45 verbose url resolved https://registry.npmjs.org/d3
+46 verbose request where is https://registry.npmjs.org/d3
+47 info trying registry request attempt 1 at 12:36:47
+48 verbose etag "85EUVKGO6PKCPJCNRWF91KVDP"
+49 http GET https://registry.npmjs.org/d3
+50 http 404 https://registry.npmjs.org/dev-dependency
+51 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+51 verbose headers   'content-type': 'application/json',
+51 verbose headers   'cache-control': 'max-age=0',
+51 verbose headers   'content-length': '51',
+51 verbose headers   'accept-ranges': 'bytes',
+51 verbose headers   date: 'Sun, 14 Jun 2015 16:36:47 GMT',
+51 verbose headers   via: '1.1 varnish',
+51 verbose headers   age: '0',
+51 verbose headers   connection: 'keep-alive',
+51 verbose headers   'x-served-by': 'cache-ord1732-ORD',
+51 verbose headers   'x-cache': 'MISS',
+51 verbose headers   'x-cache-hits': '0',
+51 verbose headers   'x-timer': 'S1434299807.841598,VS0,VE65' }
+52 silly registry.get cb [ 404,
+52 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+52 silly registry.get     'content-type': 'application/json',
+52 silly registry.get     'cache-control': 'max-age=0',
+52 silly registry.get     'content-length': '51',
+52 silly registry.get     'accept-ranges': 'bytes',
+52 silly registry.get     date: 'Sun, 14 Jun 2015 16:36:47 GMT',
+52 silly registry.get     via: '1.1 varnish',
+52 silly registry.get     age: '0',
+52 silly registry.get     connection: 'keep-alive',
+52 silly registry.get     'x-served-by': 'cache-ord1732-ORD',
+52 silly registry.get     'x-cache': 'MISS',
+52 silly registry.get     'x-cache-hits': '0',
+52 silly registry.get     'x-timer': 'S1434299807.841598,VS0,VE65' } ]
+53 silly lockFile 8a64121e-dev-dependency dev-dependency@
+54 silly lockFile 8a64121e-dev-dependency dev-dependency@
+55 http 304 https://registry.npmjs.org/d3
+56 silly registry.get cb [ 304,
+56 silly registry.get   { date: 'Sun, 14 Jun 2015 16:36:47 GMT',
+56 silly registry.get     via: '1.1 varnish',
+56 silly registry.get     'cache-control': 'max-age=60',
+56 silly registry.get     etag: '"85EUVKGO6PKCPJCNRWF91KVDP"',
+56 silly registry.get     age: '0',
+56 silly registry.get     connection: 'keep-alive',
+56 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+56 silly registry.get     'x-cache': 'MISS',
+56 silly registry.get     'x-cache-hits': '0',
+56 silly registry.get     'x-timer': 'S1434299807.846839,VS0,VE295',
+56 silly registry.get     vary: 'Accept' } ]
+57 verbose etag https://registry.npmjs.org/d3 from cache
+58 silly addNameRange number 2 { name: 'd3', range: '*', hasData: true }
+59 silly addNameRange versions [ 'd3',
+59 silly addNameRange   [ '1.29.5',
+59 silly addNameRange     '2.1.3',
+59 silly addNameRange     '2.2.1',
+59 silly addNameRange     '2.3.0',
+59 silly addNameRange     '2.3.2',
+59 silly addNameRange     '2.3.3',
+59 silly addNameRange     '2.3.4',
+59 silly addNameRange     '2.4.0',
+59 silly addNameRange     '2.4.1',
+59 silly addNameRange     '2.4.2',
+59 silly addNameRange     '2.5.1',
+59 silly addNameRange     '2.5.2',
+59 silly addNameRange     '2.6.0',
+59 silly addNameRange     '2.7.0',
+59 silly addNameRange     '2.7.2',
+59 silly addNameRange     '2.7.3',
+59 silly addNameRange     '2.7.4',
+59 silly addNameRange     '2.7.5',
+59 silly addNameRange     '2.8.0',
+59 silly addNameRange     '2.8.1',
+59 silly addNameRange     '2.9.0',
+59 silly addNameRange     '2.9.1',
+59 silly addNameRange     '2.9.2',
+59 silly addNameRange     '2.9.3',
+59 silly addNameRange     '2.9.4',
+59 silly addNameRange     '2.9.6',
+59 silly addNameRange     '2.9.7',
+59 silly addNameRange     '2.10.0',
+59 silly addNameRange     '2.10.1',
+59 silly addNameRange     '2.10.3',
+59 silly addNameRange     '3.0.0',
+59 silly addNameRange     '3.0.1',
+59 silly addNameRange     '3.0.2',
+59 silly addNameRange     '3.0.3',
+59 silly addNameRange     '3.0.4',
+59 silly addNameRange     '3.0.5',
+59 silly addNameRange     '3.0.6',
+59 silly addNameRange     '3.0.7',
+59 silly addNameRange     '3.0.8',
+59 silly addNameRange     '3.1.0',
+59 silly addNameRange     '3.1.1',
+59 silly addNameRange     '3.1.2',
+59 silly addNameRange     '3.1.3',
+59 silly addNameRange     '3.1.4',
+59 silly addNameRange     '3.1.5',
+59 silly addNameRange     '3.1.6',
+59 silly addNameRange     '3.1.7',
+59 silly addNameRange     '3.1.8',
+59 silly addNameRange     '3.1.9',
+59 silly addNameRange     '3.1.10',
+59 silly addNameRange     '3.2.0',
+59 silly addNameRange     '3.2.1',
+59 silly addNameRange     '3.2.2',
+59 silly addNameRange     '3.2.3',
+59 silly addNameRange     '3.2.4',
+59 silly addNameRange     '3.2.5',
+59 silly addNameRange     '3.2.6',
+59 silly addNameRange     '3.2.7',
+59 silly addNameRange     '3.2.8',
+59 silly addNameRange     '3.3.0',
+59 silly addNameRange     '3.3.1',
+59 silly addNameRange     '3.3.2',
+59 silly addNameRange     '3.3.3',
+59 silly addNameRange     '3.3.4',
+59 silly addNameRange     '3.3.5',
+59 silly addNameRange     '3.3.6',
+59 silly addNameRange     '3.3.7',
+59 silly addNameRange     '3.3.8',
+59 silly addNameRange     '3.3.9',
+59 silly addNameRange     '3.3.10',
+59 silly addNameRange     '3.3.11',
+59 silly addNameRange     '3.3.12',
+59 silly addNameRange     '3.3.13',
+59 silly addNameRange     '3.4.0',
+59 silly addNameRange     '3.4.1',
+59 silly addNameRange     '3.4.2',
+59 silly addNameRange     '3.4.3',
+59 silly addNameRange     '3.4.4',
+59 silly addNameRange     '3.4.5',
+59 silly addNameRange     '3.4.6',
+59 silly addNameRange     '3.4.7',
+59 silly addNameRange     '3.4.8',
+59 silly addNameRange     '3.4.9',
+59 silly addNameRange     '3.4.10',
+59 silly addNameRange     '3.4.11',
+59 silly addNameRange     '3.4.12',
+59 silly addNameRange     '3.4.13',
+59 silly addNameRange     '3.5.0',
+59 silly addNameRange     '3.5.1',
+59 silly addNameRange     '3.5.2',
+59 silly addNameRange     '3.5.3',
+59 silly addNameRange     '3.5.4',
+59 silly addNameRange     '3.5.5' ] ]
+60 verbose addNamed [ 'd3', '3.5.5' ]
+61 verbose addNamed [ '3.5.5', '3.5.5' ]
+62 silly lockFile 4144013f-d3-3-5-5 d3@3.5.5
+63 verbose lock d3@3.5.5 C:\Users\Tom\AppData\Roaming\npm-cache\4144013f-d3-3-5-5.lock
+64 silly lockFile 4144013f-d3-3-5-5 d3@3.5.5
+65 silly lockFile 4144013f-d3-3-5-5 d3@3.5.5
+66 silly lockFile 97977b46-d3 d3@
+67 silly lockFile 97977b46-d3 d3@
+68 error 404 404 Not Found: dev-dependency
+68 error 404
+68 error 404 'dev-dependency' is not in the npm registry.
+68 error 404 You should bug the author to publish it
+68 error 404 It was specified as a dependency of 'gmo-vis'
+68 error 404
+68 error 404 Note that you can also install from a
+68 error 404 tarball, folder, or http url, or git url.
+69 error System Windows_NT 6.1.7601
+70 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "dev-dependency" "d3"
+71 error cwd C:\Users\Tom\Documents\gmo-vis
+72 error node -v v0.10.35
+73 error npm -v 1.4.28
+74 error code E404
+75 verbose exit [ 1, true ]

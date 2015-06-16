@@ -1,0 +1,20 @@
+.axis text {
+  font: 14px Helvetica;
+}
+
+.axis line, path {
+  fill: none;
+  stroke: rgb(66, 56, 63);
+  shape-rendering: crispEdges;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  font: 10px Helvetica;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
