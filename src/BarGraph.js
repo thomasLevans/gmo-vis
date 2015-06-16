@@ -70,7 +70,7 @@ define(dependencies, function(d3) {
   BarGraph.prototype.propogateUpdate = function () {
     var graph = this;
 
-    d3.select('#yLabel').text('Percent Of All Corn Planted in ' + graph.props.year);
+    d3.selectAll('#yLabel').text('Percent Of All Corn Planted in ' + graph.props.year);
 
     graph.bars
       .on('mouseover', function(d) {
