@@ -49,7 +49,7 @@ define(dependencies, function(d3, BarGraph) {
     .attr('transform', 'translate(' + properties.margin.left + ',' + properties.margin.top + ')');
 
 
-  d3.csv('../dat/bt-only.csv', function(error, csv) {
+  d3.csv('./dat/bt-only.csv', function(error, csv) {
     if (error) {
       console.error(error);
     }
@@ -59,7 +59,7 @@ define(dependencies, function(d3, BarGraph) {
     graph[0].propogateUpdate();
   });
 
-  d3.csv('../dat/herbicide-only.csv', function(error, csv) {
+  d3.csv('./dat/herbicide-only.csv', function(error, csv) {
     if (error) {
       console.error(error);
     }
@@ -68,7 +68,7 @@ define(dependencies, function(d3, BarGraph) {
     graph[1].propogateUpdate();
   });
 
-  d3.csv('../dat/stacked-gene.csv', function(error, csv) {
+  d3.csv('./dat/stacked-gene.csv', function(error, csv) {
     if (error) {
       console.error(error);
     }
@@ -77,7 +77,7 @@ define(dependencies, function(d3, BarGraph) {
     graph[2].propogateUpdate();
   });
 
-  d3.csv('../dat/all-ge.csv', function(error, csv) {
+  d3.csv('./dat/all-ge.csv', function(error, csv) {
     if (error) {
       console.error(error);
     }
