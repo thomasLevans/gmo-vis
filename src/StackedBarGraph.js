@@ -23,8 +23,8 @@ define(deps, function(d3) {
 
     // Note that the data must be in the form of a top level array of length n
     // where n = the number of layers
-    // and array[n] = an array of length m containing the series of data points for that layer
-    // where m = the total length of the series
+    // and array[n] = an array of length s containing the series of data points for that layer
+    // where s = the total length of the series
     graph.groups = graph.stack(data);
 
     graph.yGroupMax = d3.max(data, function(d) { return d3.max(d, function(d0) { return d0.y; }); });
@@ -38,11 +38,11 @@ define(deps, function(d3) {
       .range([props.height, 0]);
 
     graph.color = d3.scale.linear()
-      .domain([0, n - 1])
+      .domain([0, graph.data.length - 1])
       .range(["#aad", "#556"]);
 
     graph.xAxis = d3.svg.axis()
-      .scale(x)
+      .scale(graph.x)
       .tickSize(0)
       .tickPadding(6)
       .orient("bottom");
@@ -54,7 +54,7 @@ define(deps, function(d3) {
       .append("g")
       .attr("transform", "translate(" + props.margin.left + "," + props.margin.top + ")");
 
-    graph.group = svg.selectAll(".group")
+    graph.group = graph.svg.selectAll(".group")
       .data(graph.groups)
       .enter()
       .append("g")
@@ -75,7 +75,7 @@ define(deps, function(d3) {
       .attr("y", function(d) { return graph.y(d.y0 + d.y); })
       .attr("height", function(d) { return graph.y(d.y0) - graph.y(d.y0 + d.y); });
 
-    svg.append("g")
+    graph.svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + graph.props.height + ")")
       .call(graph.xAxis);

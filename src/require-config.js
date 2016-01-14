@@ -7,7 +7,7 @@
 'use strict';
 
 require.config({
-  baseUrl:'src/js',
+  baseUrl:'src',
   paths: {
     'jquery':'../../node_modules/jquery/dist/jquery.min',
     'underscore':'../../node_modules/underscore/underscore-min',
