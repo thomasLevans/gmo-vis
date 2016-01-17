@@ -14,7 +14,9 @@ define(deps, function(d3) {
 
   function StackedBarGraph(data, props) {
 
-    var graph = this;
+    var graph = this,
+      n = data.length,
+      s = data[0].length;
 
     graph.data = data || [];
     graph.props = props;
@@ -27,10 +29,12 @@ define(deps, function(d3) {
     // where s = the total length of the series
     graph.groups = graph.stack(data);
 
-    graph.yGroupMax = d3.max(data, function(d) { return d3.max(d, function(d0) { return d0.y; }); });
+    console.log(graph.groups);
+
+    graph.yGroupMax = d3.max(graph.groups, function(group) { return d3.max(group, function(d) { return d.y; }); });
 
     graph.x = d3.scale.ordinal()
-      .domain(d3.range(data[0].length))
+      .domain(d3.range(s))
       .rangeRoundBands([0, props.width], .08);
 
     graph.y = d3.scale.linear()
@@ -39,46 +43,53 @@ define(deps, function(d3) {
 
     graph.color = d3.scale.linear()
       .domain([0, graph.data.length - 1])
-      .range(["#aad", "#556"]);
+      .range(['#aad', '#556']);
 
     graph.xAxis = d3.svg.axis()
       .scale(graph.x)
       .tickSize(0)
       .tickPadding(6)
-      .orient("bottom");
+      .orient('bottom');
+
+    graph.yAxis = d3.svg.axis()
+      .scale(graph.y)
+      .tickSize(0)
+      .tickPadding(6)
+      .orient('left');
 
     graph.svg = d3.select(graph.props.container)
-      .append("svg")
-      .attr("width", graph.props.width + graph.props.margin.left + graph.props.margin.right)
-      .attr("height", graph.props.height + graph.props.margin.top + graph.props.margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + props.margin.left + "," + props.margin.top + ")");
+      .append('svg')
+      .attr('width', graph.props.width + graph.props.margin.left + graph.props.margin.right)
+      .attr('height', graph.props.height + graph.props.margin.top + graph.props.margin.bottom)
+      .append('g')
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')');
 
-    graph.group = graph.svg.selectAll(".group")
+    graph.group = graph.svg.selectAll('.group')
       .data(graph.groups)
       .enter()
-      .append("g")
-      .attr("class", "group")
-      .style("fill", function(d, i) { return graph.color(i); });
+      .append('g')
+      .attr('class', 'group')
+      .style('fill', function(d, i) { return graph.color(i); });
 
-    graph.rect = graph.group.selectAll("rect")
+    graph.rect = graph.group.selectAll('rect')
       .data(function(d) { return d; })
       .enter()
-      .append("rect")
-      .attr("x", function(d) { return graph.x(d.x); })
-      .attr("y", graph.props.height)
-      .attr("width", graph.x.rangeBand())
-      .attr("height", 0);
+      .append('rect')
+      .attr('x', function(d, i, j) { return graph.x(d.x) + graph.x.rangeBand() / n * j; })
+      .attr('width', graph.x.rangeBand() / n)
+      .transition()
+      .attr('y', function(d) { return graph.y(d.y); })
+      .attr('height', function(d) { return graph.props.height - graph.y(d.y); });
 
-    graph.rect.transition()
-      .delay(function(d, i) { return i * 10; })
-      .attr("y", function(d) { return graph.y(d.y0 + d.y); })
-      .attr("height", function(d) { return graph.y(d.y0) - graph.y(d.y0 + d.y); });
-
-    graph.svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + graph.props.height + ")")
+    graph.svg.append('g')
+      .attr('class', 'x axis')
+      .attr('transform', 'translate(0,' + graph.props.height + ')')
       .call(graph.xAxis);
+
+    graph.svg.append('g')
+      .attr('class', 'y axis')
+      // .attr('transform', 'translate(0,' + graph.props.height + ')')
+      .call(graph.yAxis);
   }
 
   StackedBarGraph.prototype.propagateUpdate = function() {

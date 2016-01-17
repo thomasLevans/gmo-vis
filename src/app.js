@@ -20,6 +20,7 @@ define(dependencies, function(d3, StackedBarGraph) {
   },
   dataLayers = [ // n = 7, s = 10
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -28,10 +29,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -40,10 +41,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -52,10 +53,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -64,10 +65,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -76,10 +77,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -88,10 +89,10 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ],
     [
+      { x : 0, y : Math.random() * 100 },
       { x : 1, y : Math.random() * 100 },
       { x : 2, y : Math.random() * 100 },
       { x : 3, y : Math.random() * 100 },
@@ -100,8 +101,7 @@ define(dependencies, function(d3, StackedBarGraph) {
       { x : 6, y : Math.random() * 100 },
       { x : 7, y : Math.random() * 100 },
       { x : 8, y : Math.random() * 100 },
-      { x : 9, y : Math.random() * 100 },
-      { x : 10, y : Math.random() * 100 }
+      { x : 9, y : Math.random() * 100 }
     ]
   ];
 
