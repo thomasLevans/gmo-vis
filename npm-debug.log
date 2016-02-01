@@ -1,54 +1,44 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/Cellar/node/4.1.1/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'uninstall',
-1 verbose cli   'coffee-script',
-1 verbose cli   '--save' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'test' ]
 2 info using npm@3.3.12
-3 info using node@v4.1.1
-4 silly loadCurrentTree Starting
-5 silly install loadCurrentTree
-6 silly install readLocalPackageData
-7 silly install normalizeTree
-8 silly loadCurrentTree Finishing
-9 silly loadIdealTree Starting
-10 silly install loadIdealTree
-11 silly cloneCurrentTree Starting
-12 silly install cloneCurrentTreeToIdealTree
-13 silly cloneCurrentTree Finishing
-14 silly loadShrinkwrap Starting
-15 silly install loadShrinkwrap
-16 silly loadShrinkwrap Finishing
-17 silly loadAllDepsIntoIdealTree Starting
-18 silly uninstall loadAllDepsIntoIdealtree
-19 verbose stack Error: Missing required argument #3
-19 verbose stack     at replaceModule (/usr/local/lib/node_modules/npm/lib/install/deps.js:427:3)
-19 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/deps.js:236:7
-19 verbose stack     at Array.forEach (native)
-19 verbose stack     at exports.removeDeps (/usr/local/lib/node_modules/npm/lib/install/deps.js:232:8)
-19 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-19 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-19 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
-19 verbose stack     at Uninstaller.loadAllDepsIntoIdealTree (/usr/local/lib/node_modules/npm/lib/uninstall.js:72:3)
-19 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-19 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-20 verbose cwd /Users/tlevans/Documents/gmo-vis
-21 error Darwin 15.2.0
-22 error argv "/usr/local/Cellar/node/4.1.1/bin/node" "/usr/local/bin/npm" "uninstall" "coffee-script" "--save"
-23 error node v4.1.1
-24 error npm  v3.3.12
-25 error code EMISSINGARG
-26 error typeerror Error: Missing required argument #3
-26 error typeerror     at replaceModule (/usr/local/lib/node_modules/npm/lib/install/deps.js:427:3)
-26 error typeerror     at /usr/local/lib/node_modules/npm/lib/install/deps.js:236:7
-26 error typeerror     at Array.forEach (native)
-26 error typeerror     at exports.removeDeps (/usr/local/lib/node_modules/npm/lib/install/deps.js:232:8)
-26 error typeerror     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-26 error typeerror     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-26 error typeerror     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
-26 error typeerror     at Uninstaller.loadAllDepsIntoIdealTree (/usr/local/lib/node_modules/npm/lib/uninstall.js:72:3)
-26 error typeerror     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-26 error typeerror     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-26 error typeerror This is an error with npm itself. Please report this error at:
-26 error typeerror     <http://github.com/npm/npm/issues>
-27 verbose exit [ 1, true ]
+3 info using node@v5.5.0
+4 verbose run-script [ 'pretest', 'test', 'posttest' ]
+5 info lifecycle gmo-vis@0.1.0~pretest: gmo-vis@0.1.0
+6 silly lifecycle gmo-vis@0.1.0~pretest: no script for pretest, continuing
+7 info lifecycle gmo-vis@0.1.0~test: gmo-vis@0.1.0
+8 verbose lifecycle gmo-vis@0.1.0~test: unsafe-perm in lifecycle true
+9 verbose lifecycle gmo-vis@0.1.0~test: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/tlevans/Documents/gmo-vis/node_modules/.bin:/usr/local/opt/rbenv/shims:/Users/tlevans/.rbenv/shims:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+10 verbose lifecycle gmo-vis@0.1.0~test: CWD: /Users/tlevans/Documents/gmo-vis
+11 silly lifecycle gmo-vis@0.1.0~test: Args: [ '-c',
+11 silly lifecycle   'mocha --compilers js:babel-core/register --require ./test/test_helper.js test/**/*.jsx' ]
+12 silly lifecycle gmo-vis@0.1.0~test: Returned: code: 1  signal: null
+13 info lifecycle gmo-vis@0.1.0~test: Failed to exec test script
+14 verbose stack Error: gmo-vis@0.1.0 test: `mocha --compilers js:babel-core/register --require ./test/test_helper.js test/**/*.jsx`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:821:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid gmo-vis@0.1.0
+16 verbose cwd /Users/tlevans/Documents/gmo-vis
+17 error Darwin 15.2.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "test"
+19 error node v5.5.0
+20 error npm  v3.3.12
+21 error code ELIFECYCLE
+22 error gmo-vis@0.1.0 test: `mocha --compilers js:babel-core/register --require ./test/test_helper.js test/**/*.jsx`
+22 error Exit status 1
+23 error Failed at the gmo-vis@0.1.0 test script 'mocha --compilers js:babel-core/register --require ./test/test_helper.js test/**/*.jsx'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the gmo-vis package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     mocha --compilers js:babel-core/register --require ./test/test_helper.js test/**/*.jsx
+23 error You can get their info via:
+23 error     npm owner ls gmo-vis
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
